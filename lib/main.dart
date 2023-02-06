@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bottons.dart';
 
 void main(){
-  runApp(HomePage());
+  runApp(FirstEx());
 }
 
-class HomePage extends StatelessWidget{
+class FirstEx extends StatefulWidget{
+  @override
+  SecondEx createState() {
+    return SecondEx();
+  }
+}
+
+class SecondEx extends State<FirstEx>{
+  String email = "";
+  TextEditingController nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.pink),
       home: Scaffold(
-        appBar: AppBar(title: Text('App Name')),
+        appBar: AppBar(title: Text("App Name")),
       ),
     );
   }
 }
-
-
-  
-
-
 
 
